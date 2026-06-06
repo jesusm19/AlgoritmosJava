@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;TwoSum&apos; to &apos;LeetCode&apos;&#x0D;&#x0A;- Original project: &apos;LeetCode&apos;&#x0D;&#x0A;- Original element: &apos;LeetCode/src/TwoSum&apos;&#x0D;&#x0A;- Renamed element: &apos;LeetCode/src/LeetCode&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;TwoSum&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;TwoSum" name="LeetCode" qualified="false" references="true" stamp="1780361571347" textual="false" version="1.0"/>
+</session>

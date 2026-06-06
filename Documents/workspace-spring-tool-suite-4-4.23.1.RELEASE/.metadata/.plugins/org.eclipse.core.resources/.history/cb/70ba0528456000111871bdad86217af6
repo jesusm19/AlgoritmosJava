@@ -1,0 +1,37 @@
+package ordenamiento;
+
+import java.util.Iterator;
+
+public class Ordenamiento {
+	
+	public static void main(String[] args) {
+		//int [] numeros = {1,2,5,3,3,6,3,6,7,2,4,8,8,4,2,3,4,54,63,46,34,12,23,3,1,3,2,3,4,3,5,2,3,3,4,5,6,7,8,9,0};
+		int [] numeros = {1,7,2,0};
+		int [] listaNumerosOrdenada = ordenarNumeros(numeros); 
+		
+	}
+	
+	private static int[] ordenarNumeros(int [] numeros) {
+		for (int i = 0; i<=numeros.length; i++) {
+			for(int j = i+1; j< numeros.length; j++) {
+				int numeroMayor = numeros[i];
+				
+				if(numeros[j] > numeroMayor) {
+					numeroMayor = numeros[j];
+					int auxiliar = numeros[i];
+					numeros[i] = numeroMayor;
+					numeros[j] = auxiliar;
+				}
+				
+				
+				
+			}
+			
+		}
+		for (int i : numeros) {
+			System.out.println(i);
+		}
+		return null;
+	}
+
+}

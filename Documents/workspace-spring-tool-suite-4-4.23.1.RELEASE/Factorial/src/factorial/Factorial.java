@@ -1,0 +1,17 @@
+package factorial;
+
+public class Factorial {
+	
+	public static void main(String [] args) {
+		
+		int fin = 7;
+		int factor =  1;
+		for (int i = 1; i <= fin; i++) {
+			factor *= i;
+			System.out.print(factor + " ");
+		}
+		
+		
+	}
+
+}

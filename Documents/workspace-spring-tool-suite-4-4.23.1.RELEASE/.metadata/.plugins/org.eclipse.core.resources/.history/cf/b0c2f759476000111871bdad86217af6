@@ -1,0 +1,18 @@
+package polindromo;
+
+public class polindromo {
+	
+	public static void main(String[] args) {
+		
+		String palabra = "Roma";
+		
+		System.out.println(palabra);
+		System.out.println(palabra.toCharArray().length);
+		for (int i = palabra.toCharArray().length -1; i > 0; i--) {
+			
+			System.out.println(i);
+			
+		}
+	}
+
+}

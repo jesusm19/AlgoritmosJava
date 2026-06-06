@@ -1,0 +1,49 @@
+package TwoSum;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TwoSum {
+	
+	public static void main(String []args) {
+		int[] nums = {2,7,11,15};
+		Solution solution = new Solution();
+		
+		List array = solution.twoSum(nums, 9);
+		System.out.println(array.size());
+		
+		System.out.println("algo");
+		
+	}
+	
+	
+
+
+}
+
+
+class Solution {
+    public List<Integer> twoSum(int[] nums, int target) {
+       ArrayList indices = new ArrayList<Integer>();
+       int a=0;
+       int b=0;
+        for(int i=0; i< nums.length; i++){
+            int suma = nums[i];
+            a = nums[i];
+            for(int j=1; j< nums.length; j++){
+                suma += nums[j];
+                b = nums[j];
+                if(suma == target){
+                    break;
+                } 
+                
+                if(suma > target) {
+                	suma -= nums[j];
+                } 
+            }
+            indices.add(a);
+            indices.add(b);
+        }
+        return indices;
+    }
+}

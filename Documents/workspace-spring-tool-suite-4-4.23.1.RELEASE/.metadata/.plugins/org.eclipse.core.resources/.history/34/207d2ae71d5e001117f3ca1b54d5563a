@@ -1,0 +1,19 @@
+package LeetCode;
+
+public class LongestSubstring {
+
+	public static void main(String []args) {
+		Solution solution = new Solution();
+		System.out.println(solution.lengthOfLongestSubstring("abcabcbb"));
+
+		
+	}
+	
+	
+}
+
+class SolutionLong {
+    public int lengthOfLongestSubstring(String s) {
+        return 0;
+    }
+}
