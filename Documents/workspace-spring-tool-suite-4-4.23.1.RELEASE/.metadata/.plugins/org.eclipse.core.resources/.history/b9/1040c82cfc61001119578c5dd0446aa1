@@ -1,0 +1,101 @@
+package romanos;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class NumerosRomanos {
+	
+	public static void main(String [] args) {
+		
+		String numeroRomano = "MCMXCVI";
+		System.out.println(numeroRomano + " : " + romanToInt(numeroRomano));
+		
+	}
+	
+	private static int romanToInt(String s) {
+		Map<Character, Integer> numerosRomanos = getNumerosRomanos();
+		
+		int suma = 0;
+		int tipo = 0;
+		char auxiliar = '0';
+		for (int i = s.toCharArray().length -1; i >= 0; i--) {
+			char numeroRomano = s.toCharArray()[i];
+			
+			int cantidad = numerosRomanos.get(numeroRomano);
+			
+			if(tipo == 1 ) {
+				if(numeroRomano != 'I') tipo = 0;
+			}
+			if(tipo == 2 ) {
+				if(numeroRomano != 'X') tipo = 0;
+			}
+			if(tipo == 3 ) {
+				if(numeroRomano != 'C') tipo = 0;
+			}
+			
+			if((numeroRomano == 'V' || numeroRomano == 'X') && tipo == 0) tipo = 1;
+			
+			if((numeroRomano == 'L' || numeroRomano == 'C') && tipo == 0) tipo = 2;
+			
+			if((numeroRomano == 'D' || numeroRomano == 'M') && tipo == 0) tipo = 3;
+			
+			
+			switch (tipo) {
+				case 1: {
+					if(numeroRomano == 'I') {
+						suma -= cantidad;
+						tipo = 0;
+						break;
+					}
+					suma += cantidad;
+					break;
+				}
+				case 2: {
+					if(numeroRomano == 'X') {
+						suma -= cantidad;
+						tipo = 0;
+						break;
+					}
+					suma += cantidad;
+					break;
+					
+				}
+				
+				case 3: {
+					if(numeroRomano == 'C') {
+						suma -= cantidad;
+						tipo = 0;
+						break;
+					}
+					suma += cantidad;
+					break;
+				}
+				default:
+					suma += cantidad;
+			}
+			
+			auxiliar = numeroRomano;
+			
+		}
+		
+		return suma;
+    }
+	
+	private static Map<Character, Integer> getNumerosRomanos(){
+		
+		Map<Character, Integer> numerosRomanos = new HashMap<>();
+		numerosRomanos.put('I', 1);
+		numerosRomanos.put('V', 5);
+		numerosRomanos.put('X', 10);
+		numerosRomanos.put('L', 50);
+		numerosRomanos.put('C', 100);
+		numerosRomanos.put('D', 500);
+		numerosRomanos.put('M', 1000);
+		
+		return numerosRomanos;
+		
+	}
+	
+	
+
+}

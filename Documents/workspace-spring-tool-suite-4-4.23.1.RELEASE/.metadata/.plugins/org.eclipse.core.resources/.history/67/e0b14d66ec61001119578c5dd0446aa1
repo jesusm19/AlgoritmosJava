@@ -1,0 +1,37 @@
+package romanos;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class NumerosRomanos {
+	
+	public static void main(String [] args) {
+		
+		
+		
+		
+	}
+	
+	private static int romanToInt(String s) {
+		
+		return 0;
+    }
+	
+	private static Map<String, Integer> getNumerosRomanos(){
+		
+		Map<String, Integer> numerosRomanos = new HashMap<>();
+		numerosRomanos.put("I", 1);
+		numerosRomanos.put("V", 5);
+		numerosRomanos.put("X", 10);
+		numerosRomanos.put("L", 50);
+		numerosRomanos.put("C", 100);
+		numerosRomanos.put("D", 500);
+		numerosRomanos.put("M", 1000);
+		
+		return numerosRomanos;
+		
+	}
+	
+	
+
+}

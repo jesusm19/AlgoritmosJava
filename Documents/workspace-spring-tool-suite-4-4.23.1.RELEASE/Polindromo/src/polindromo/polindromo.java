@@ -12,6 +12,25 @@ public class polindromo {
 			System.out.print(palabra.toCharArray()[i]);
 			
 		}
+		System.out.println();
+		int numero = 101;
+		System.out.println(isPalindrome(numero));
+		
 	}
+	
+	
+	public static boolean isPalindrome(int x) {
+        String number = String.valueOf(x);
+        char[] polindrome = new char[number.length()];
+        int index = 0;
+        for(int i = number.length() -1; i >= 0; i--){
+            polindrome[index] = number.toCharArray()[i];
+            index++;
+        }
+        
+        if(number.equals(String.valueOf(polindrome))) return true;
+        
+        return false;
+    }
 
 }
